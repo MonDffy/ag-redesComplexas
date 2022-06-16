@@ -1,3 +1,6 @@
+import csv
+
+from operator import contains
 from xml.etree.ElementTree import TreeBuilder
 import pandas
 import networkx
@@ -7,8 +10,6 @@ pathAcidentes = r"dados\acidentes_si-log-2020.csv"
 pathFiscalizacao = r"dados\fiscalizacao_eletronica_jan2021.csv"
 dfAcidentes = pandas.read_csv(pathAcidentes, encoding='unicode_escape')
 dfFiscalizacao = pandas.read_csv(pathFiscalizacao)
-
-# sdfAcidentes = dfAcidentes[].str.split(";")
 
 dfAcidentes[[
     'Nº_boletim',
@@ -40,7 +41,7 @@ dfAcidentes = dfAcidentes[[
     "Nº_imovel"
 ]]
 
-coreu = "CORACAO EUCARISTICO"
+coreu = "SAO GABRIEL"
 dfAcidentes = dfAcidentes[dfAcidentes['nome_bairro'].str.contains(coreu)]
 
 dfFiscalizacao = dfFiscalizacao[[
@@ -52,9 +53,10 @@ dfFiscalizacao = dfFiscalizacao[[
     "GEOMETRIA"
 ]]
 var = 0
-teste = []
 aux = []
 anterior = ""
+
+graph = networkx.Graph()
 
 while (var < dfAcidentes['nome_logradouro'].size):
     nomeRua = dfAcidentes['nome_logradouro'].iloc[var].replace(" ", "")
@@ -68,22 +70,18 @@ while (var < dfAcidentes['nome_logradouro'].size):
         if (dfFiscalizacao['DESC_LOC_CONTROLADOR_TRANSITO'].str.upper(
         ).str.replace(" ", "").str.contains(nomeRua).iloc[i]):
             aux.append(dfFiscalizacao.iloc[i])
+            graph.add_node(
+                dfFiscalizacao['DESC_LOC_CONTROLADOR_TRANSITO'].iloc[i])
+            if (dfFiscalizacao['DESC_LOC_CONTROLADOR_TRANSITO'].str.upper(
+            ).str.replace(" ", "").str.contains(nomeRua).iloc[i+1]):
+                dfFiscalizacao['DESC_LOC_CONTROLADOR_TRANSITO'].iloc[i+1]
+                graph.add_edge(dfFiscalizacao['DESC_LOC_CONTROLADOR_TRANSITO'].iloc[i],
+                               dfFiscalizacao['DESC_LOC_CONTROLADOR_TRANSITO'].iloc[i+1])
     var += 1
-
 dfFiscalizacao = pandas.DataFrame(aux)
 
+# print(dfAcidentes)
+# print(dfFiscalizacao)
 
-# graph = networkx.Graph()
-# graph.add_ Nºde(1)
-# graph.add_ Nºdes_from([
-#     (2, {"color": "red"}),
-#     (3, {"color": "green"})
-# ])
-# graph.add_edge(1, 2)
-# graph.add_edges_from([(2, 3), (3, 4)])
-#  Nºde_list = graph. Nºdes()
-
-# graph[1]
-
-# networkx.draw(graph, with_labels=True, font_weight='bold')
-# plt.show()
+networkx.draw(graph, with_labels=True,  node_size=10)
+plt.show()
