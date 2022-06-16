@@ -2,7 +2,7 @@ import pandas
 import networkx
 import matplotlib.pyplot as plt
 
-# path = r"dados\fiscalizacao_eletronica_jan2021.csv"
+# path = r"ag-redesComplexas\dados\fiscalizacao_eletronica_jan2021.csv"
 # dataFrame = pandas.read_csv(path)
 # # print(dataFrame)
 
