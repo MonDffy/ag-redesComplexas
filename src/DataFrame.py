@@ -1,7 +1,5 @@
 from operator import contains
 import pandas
-import networkx
-import matplotlib.pyplot as plt
 
 pathAcidentes = r"dados\acidentes_si-log-2020.csv"
 pathFiscalizacao = r"dados\fiscalizacao_eletronica_jan2021.csv"
@@ -38,7 +36,7 @@ dfAcidentes = dfAcidentes[[
     "Nº_imovel"
 ]]
 
-coreu = "CORACAO EUCARISTICO"
+coreu = "CENTRO"
 dfAcidentes = dfAcidentes[dfAcidentes['nome_bairro'].str.contains(coreu)]
 
 dfFiscalizacao = dfFiscalizacao[[
@@ -76,6 +74,3 @@ while (var < dfAcidentes['nome_logradouro'].size):
             aux.append(dfFiscalizacao.iloc[i])
     var += 1
 dfFiscalizacao = pandas.DataFrame(aux)
-
-# print(dfAcidentes)
-# print(dfFiscalizacao)
