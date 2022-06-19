@@ -1,0 +1,15 @@
+AfPena= 29
+Santa Catarina =2
+Amazonas = 46
+Curitiba = 2
+Contorno = 33
+Andradas=12
+São Paulo=2
+Álvares Cabral=1
+Bahia=4
+Carandaí=2
+Espírito Santo =2
+Guaicurus=2
+Augusto de Lima =4
+Mato Grosso=4
+Bias Fortes=5
