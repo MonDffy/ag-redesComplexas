@@ -22,8 +22,6 @@ color_map = [(0.93, 0, 0.07, 1),  # Cor de cada um dos vértices em RGBA decimal
                (0.75, 0, 0.25, 1),
                (0.75, 0, 0.25, 1),
                (0.86, 0, 0.14, 1),
-               (1,1,1,1),   #faltou
-               (1,1,1,1)    #faltou
                ]
 aux = []
 filter = ['AFONSO PENA                                       ',  # Filtro para pegar somente as ruas que tem dados nas duas tabelas
@@ -53,10 +51,6 @@ edgeSaoPaulo = [('SAO PAULO                                         ', 'DO CONTO
                  'AMAZONAS                                          '),
                 ('SAO PAULO                                         ',
                  'AFONSO PENA                                       '),
-                ('SAO PAULO                                         ',
-                 'DOS CAETES                                        '),
-                ('SAO PAULO                                         ',
-                 'SANTOS DUMONT                                     '),
                 ('SAO PAULO                                         ', 'DOS GUAICURUS                                     ')]
 
 
