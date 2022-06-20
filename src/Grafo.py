@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 graph = networkx.Graph()
 
 nodes = []
-nodesColors = [(0.93,0,0.07),
+nodesColors = [(0.93,0,0.07), #Cor de cada um dos vértices em RGB decimal, indo de 0-1
                (0.78,0,0.22),
                (0.84,0,0.26),
                (0.49,0,0.51),
@@ -22,7 +22,7 @@ nodesColors = [(0.93,0,0.07),
                (0.75,0,0.25),
                (0.86,0,14)]
 aux= []
-filter = [               'AFONSO PENA                                       ' ,
+filter = [               'AFONSO PENA                                       ' , #Filtro para pegar somente as ruas que tem dados nas duas tabelas
                          'SANTA CATARINA                                    ' ,
                          'AMAZONAS                                          ' ,
                          'CURITIBA                                          ' ,
@@ -121,5 +121,5 @@ graph.add_edges_from(edgeMGrosso)
 graph.add_edges_from(edgeBiasFortes)
 graph.add_edges_from(edgeGuaicurus)          
 
-networkx.draw(graph,node_color = nodesColors , with_labels=True, font_weight='normal')
+networkx.draw(graph , with_labels=True, font_weight='normal')
 plt.show()
