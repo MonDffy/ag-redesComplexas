@@ -1,19 +1,19 @@
 Ruas que serão utilizadas para coletas de dados:
 Av Cristiano Machado
     Cores:
-                            Fisc            Aciden
-'SAO PAULO                   2 = 16.45         29  = 238.4
-'SANTA CATARINA              2 = 56.66          7  = 198.33
-'ALVARES CABRAL              1 = 42.5           5  = 212.5
-'AMAZONAS                   46 = 131.79        43  = 123.20
-'DOS ANDRADAS               12 = 58.84         40  = 196.15
-'AFONSO PENA                29 = 60.61         93  = 194.38
-'DOS GUAICURUS               2 = 22.17         21  = 232.82
-'ESPIRITO SANTO              2 = 17            28  = 238
-'AUGUSTO DE LIMA             4 =48.57         17=206.43 
-'CURITIBA                    2 = 14.6         33 = 240.4 
-'DO CONTORNO                33 = 91.47        59 = 163.53
-'CARANDAI                    2 = 46.36         9 = 208.64
-'MATO GROSSO                 4 = 63.75        12 = 191.25
-'BIAS FORTES                 5 = 63.75        15 = 191.25
-'DA BAHIA                    4 = 34             26 = 221
+                            Fisc                   Aciden
+'SAO PAULO                   2 = 0.05              29 = 0.311 
+'SANTA CATARINA              2 = 0.05               7 = 0.08 
+'ALVARES CABRAL              1 = 0.02               5 = 0.05 
+'AMAZONAS                   46 = 1                 43 = 0.462 
+'DOS ANDRADAS               12 = 0.261             40 = 0.430
+'AFONSO PENA                29 = 0.63              93 = 1 
+'DOS GUAICURUS               2 = 0.05              21 = 0.225 
+'ESPIRITO SANTO              2 = 0.05              28 = 0.301
+'AUGUSTO DE LIMA             4 = 0.09              17 = 0.183
+'CURITIBA                    2 = 0.05              33 = 0.354 
+'DO CONTORNO                33 = 0.72              59 = 0.634
+'CARANDAI                    2 = 0.05               9 = 0.097
+'MATO GROSSO                 4 = 0.09              12 = 0.130
+'BIAS FORTES                 5 = 0.11              15 = 0.161
+'DA BAHIA                    4 = 0.09              26 = 0.280
